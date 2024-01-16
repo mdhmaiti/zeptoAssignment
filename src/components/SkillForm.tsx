@@ -26,7 +26,32 @@ const SkillForm: React.FC = () => {
     { id: 7, suggestions: "Elephant", image: "/elephant.png" },
     { id: 8, suggestions: "Giraffe", image: "/giraffe.jpg" },
     { id: 9, suggestions: "Penguin", image: "/penguin.jpg" },
-    { id: 10, suggestions: "Kangaroo", image: "/kangaroo.jpg" },
+    { id: 10, suggestions: "a", image: "/kangaroo.jpg" },
+    { id: 11, suggestions: "ab", image: "/kangaroo.jpg" },
+    { id: 12, suggestions: "abc", image: "/kangaroo.jpg" },
+    { id: 13, suggestions: "", image: "/kangaroo.jpg" },
+    { id: 14, suggestions: "T", image: "/kangaroo.jpg" },
+    { id: 15, suggestions: "Ta", image: "/kangaroo.jpg" },
+    { id: 16, suggestions: "Tab", image: "/kangaroo.jpg" },
+    { id: 17, suggestions: "Tac", image: "/kangaroo.jpg" },
+    { id: 18, suggestions: "tad", image: "/kangaroo.jpg" },
+    { id: 19, suggestions: "fddfshra", image: "/kangaroo.jpg" },
+    { id: 20, suggestions: "reejn", image: "/kangaroo.jpg" },
+    { id: 21, suggestions: "eleeklnjnj", image: "/kangaroo.jpg" },
+    { id: 22, suggestions: "dsbjvhjsdb", image: "/kangaroo.jpg" },
+    { id: 23, suggestions: "Kangaroojnjhj", image: "/kangaroo.jpg" },
+    { id: 24, suggestions: "Kangarooawdfa", image: "/kangaroo.jpg" },
+    { id: 25, suggestions: "penjkhngj", image: "/kangaroo.jpg" },
+    { id: 26, suggestions: "hebjnbj", image: "/kangaroo.jpg" },
+    { id: 27, suggestions: "hh", image: "/kangaroo.jpg" },
+
+
+    { id: 28, suggestions: "ldhdhv", image: "/kangaroo.jpg" },
+    { id: 29, suggestions: "ljdjdj", image: "/kangaroo.jpg" },
+    { id: 30, suggestions: "ldnjhjhdhhj", image: "/kangaroo.jpg" },
+    { id: 31, suggestions: "gidyheb", image: "/kangaroo.jpg" },
+    { id: 32, suggestions: "exejex", image: "/kangaroo.jpg" },
+    { id: 33, suggestions: "jjaaga", image: "/kangaroo.jpg" },
   ];
 
   const getSkillSuggestions = async (input: string) => {
@@ -119,12 +144,13 @@ const SkillForm: React.FC = () => {
       return;
     }
 
+   
     getSkillSuggestions(input);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [input, tags]); 
 
   return (
-    <div className=" flex flex-col items-center gap-10">
+    <div className=" flex flex-col items-center gap-10 mb-20">
       <div className="relative">
         <div className="tags-input">
           <ul id="tags">
@@ -176,9 +202,9 @@ const SkillForm: React.FC = () => {
               onKeyDown={handleBackspace}
               placeholder="Typing......"
             />
-            <div className=" absolute inset-5 backdrop-blur-2xlmt-2 ml-5 z-10 w-48 ">
+            <div className=" absolute inset-5 backdrop-blur-2xl mt-2 ml-5 z-10 w-48 ">
               {showSuggestions && suggestions.length > 0 && (
-                <ul className="shadow shadow-slate-200  bg-slate-100 rounded-lg">
+                <ul className="shadow shadow-slate-200  bg-slate-100 rounded-lg max-h-48 overflow-y-auto ">
                   {suggestions.map((suggestion) => (
                     <li
                       key={suggestion.id}
