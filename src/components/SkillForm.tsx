@@ -218,7 +218,7 @@ const SkillForm: React.FC = () => {
                         alt=" image "
                         className=" rounded-full"
                       />
-                      <p> {suggestion.suggestions}</p>
+                      <p className="text-slate-950"> {suggestion.suggestions}</p>
                     </li>
                   ))}
                 </ul>
